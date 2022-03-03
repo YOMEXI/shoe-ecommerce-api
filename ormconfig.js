@@ -10,9 +10,9 @@ module.exports = {
   database: "test",
   synchronize: true,
   logging: false,
-  entities: [rootDir + "/entities/**/*{.ts,.js}"],
-  migrations: [rootDir + "/migrations/**/*{.ts,.js}"],
-  subscribers: [rootDir + "/subscriber/**/*{.ts,.js}"],
+  entities: [rootDir + "src/entities/**/*{.ts,.js}"],
+  migrations: [rootDir + "src/migrations/**/*{.ts,.js}"],
+  subscribers: [rootDir + "src/subscriber/**/*{.ts,.js}"],
   cli: {
     entitiesDir: rootDir + "/entities",
     migrationsDir: rootDir + "/migrations",
