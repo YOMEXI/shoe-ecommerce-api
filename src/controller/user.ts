@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { plainToClass } from "class-transformer";
 import { validate } from "class-validator";
-import { registerInputDto, userLoginDto } from "../dto.ts/userDto";
+
 import { AdminAndUser, mapError, signJwt } from "../utils/security";
 import { TheUser } from "../entities/user";
 
