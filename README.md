@@ -1,6 +1,7 @@
-api for a mini shoe ecommerce site
+ shoe ecommerce api Built with Expressjs, Mongodb, socket.io
 
-Functionalities:
+Functionalities includes:
+
 1) Create, view products
 2) product pagination
 3) authentication and authorization 
