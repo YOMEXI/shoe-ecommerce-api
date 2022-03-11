@@ -22,6 +22,10 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 app.use(cookieParser());
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
 
 app.use(
   cors({
