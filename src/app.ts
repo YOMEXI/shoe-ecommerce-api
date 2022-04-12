@@ -34,7 +34,7 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    credentials: process.env.NODE_ENV === "development" ? false : true,
+    credentials: true,
     origin: process.env.ORIGIN,
     optionsSuccessStatus: 200,
     exposedHeaders: ["Set-Cookie"],
