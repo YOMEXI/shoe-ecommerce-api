@@ -23,16 +23,13 @@ app.use(morgan("dev"));
 
 app.use(cookieParser());
 app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    process.env.NODE_ENV === "production" ? "*" : "*"
-  );
+  res.header("Access-Control-Allow-Origin", "*");
   next();
 });
 
 app.use(
   cors({
-    credentials: true,
+    credentials: process.env.NODE_ENV === "production" ? false : true,
     origin: process.env.ORIGIN,
     optionsSuccessStatus: 200,
     exposedHeaders: ["Set-Cookie"],
