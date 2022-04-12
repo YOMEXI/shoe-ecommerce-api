@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    process.env.NODE_ENV === "production" ? "*" : process.env.CorsAllowedWebsite
+    process.env.NODE_ENV === "production" ? "*" : "*"
   );
   next();
 });
