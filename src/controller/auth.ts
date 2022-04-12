@@ -97,7 +97,7 @@ export const Login = asyncHandler(
     res.cookie(
       "token",
       cookie.serialize("token", token, {
-        httpOnly: false,
+        httpOnly: process.env.NODE_ENV === "production" ? true : false,
         secure: process.env.NODE_ENV === "production" ? true : false,
         sameSite: "none",
         maxAge: 360000,
