@@ -22,13 +22,15 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 app.use(cookieParser());
-// app.use((req, res, next) => {
-//   res.header(
-//     "Access-Control-Allow-Origin",
-//     process.env.NODE_ENV === "production" ? "*" : process.env.CorsAllowedWebsite
-//   );
-//   next();
-// });
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    process.env.NODE_ENV === "development"
+      ? "*"
+      : process.env.CorsAllowedWebsite
+  );
+  next();
+});
 
 app.use(
   cors({
